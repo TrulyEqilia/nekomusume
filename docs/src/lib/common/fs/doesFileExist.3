@@ -1,0 +1,14 @@
+.TH man 3 "2024-05-12" "0.0.0" "nekomusume internal common library doesFileExist(3)"
+.SH NAME
+doesFileExist - Check if the file exists
+.SH SYNOPSIS
+#include "src/lib/shared/fs/doesFileExist.h"
+
+uint8_t doesFileExist(char *fname);
+.SH DESCRIPTION
+The doesFileExist(3) function calls access(3), checks if it's equal to F_OK, and returns the result;
+.SH RETURN VALUE
+If the access(3) call doesn't return F_OK, the return value is zero. Otherwise, the return value is one.
+.SH SEE ALSO
+.BR nekomusume (8),
+.BR access (3)

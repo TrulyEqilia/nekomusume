@@ -1,0 +1,15 @@
+.TH man 3 "2024-05-12" "0.0.0" "nekomusume internal common library getFormalUsername(3)"
+.SH NAME
+.B getFormalUsername \- get username with everything lowercased, except the first letter, which is uppercased.
+.SH SYNOPSIS
+#include "src/lib/shared/char/getFormalUsername.h"
+
+uint8_t getFormalUsername(char *username);
+.SH DESCRIPTION
+The getFormalUsername(3) function calls getlogin_r(3) to the username variable, loops through each letter and sets it to lowercase, and then sets the first letter to uppercase.
+.SH RETURN VALUE
+If the size of hostname variable is smaller than 1, the return value is -1. If the function quit with no errors, the return value is 0. If the getlogin_r function failed, the return value is errno of the qgetlogin_r function.
+.SH SEE ALSO
+.BR nekomusume (8),
+.BR strcmp (3),
+.BR getlogin_r(3)

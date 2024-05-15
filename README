@@ -1,0 +1,11 @@
+=========================
+|	nekomusume	|
+=========================
+
+This is nekomusume, a bad attempt at writing a package keeper.
+
+
+# Notes
+
+This is meant to be compiled with Clang [klang].
+With GCC, YMMV.
