@@ -1,4 +1,4 @@
-name: Nekomusume (musl, dynamic)
+name: Nekomusume (glibc, dynamic)
 
 on:
   push:
