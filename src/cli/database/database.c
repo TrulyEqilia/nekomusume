@@ -10,5 +10,6 @@ uint8_t cli_database(int argc, char *argv[])
 		cli_databaseHelp();
 		return 0;
 	}
+	
 	return 0;
 }
