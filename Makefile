@@ -1,5 +1,4 @@
 CC=clang
-CC2=gcc
 LD=ld
 
 CFLAGS=-Wall -Wextra -Wpedantic -Og -ggdb3 -fPIC -fstack-clash-protection
