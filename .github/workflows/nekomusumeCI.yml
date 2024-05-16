@@ -17,3 +17,8 @@ jobs:
       run: utils/create-build-skeleton.sh
     - name: make
       run: make
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: nekomusume-artifact
+        path: bins/nekomusume
