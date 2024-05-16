@@ -14,10 +14,10 @@ jobs:
                 steps:
                         - uses: actions/checkout@v4
                         - name: Install dependencies
-                                run: make
+                        run: make
 
                         - name: Upload artifact
-                                uses: actions/upload-artifact@v2
+                        uses: actions/upload-artifact@v2
                         with:
                                 name: nekomusume binary
                                 path: bins/nekomusume
