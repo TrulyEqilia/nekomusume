@@ -8,8 +8,8 @@ entry: cli lib
 	$(LD) $(LDFLAGS) -r -o build/objects/src/mix.o build/objects/src/cli/mix.o build/objects/src/lib/mix.o
 	$(CC) $(LDFLAGS) -o bins/nekomusume build/objects/src/mix.o
 
-cli: cliMain cliHelp cliDatabase
-	$(LD) $(LDFLAGS) -r -o build/objects/src/cli/mix.o build/objects/src/cli/main.o build/objects/src/cli/help.o
+cli: cliMain cliHelp cliDatabase cliDatabaseHelp
+	$(LD) $(LDFLAGS) -r -o build/objects/src/cli/mix.o build/objects/src/cli/main.o build/objects/src/cli/help.o build/objects/src/cli/database.o build/objects/src/cli/databaseHelp.o
 
 cliMain:
 	$(CC) $(CFLAGS) -c -o build/objects/src/cli/main.o src/cli/main.c
@@ -19,6 +19,9 @@ cliHelp:
 
 cliDatabase:
 	$(CC) $(CFLAGS) -c -o build/objects/src/cli/database.o src/cli/database.c
+
+cliDatabaseHelp:
+	$(CC) $(CFLAGS) -c -o build/objects/src/cli/databaseHelp.o src/cli/databaseHelp.c
 
 lib: libCommon
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/mix.o build/objects/src/lib/common/mix.o

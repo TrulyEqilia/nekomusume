@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #include "../../headers/src/cli/index.h"
+#include "../../headers/src/cli/database.h"
 
 #include "../../headers/src/cli/help.h"
 
@@ -21,6 +22,11 @@ int main(int argc, char *argv[])
 
 	if (strcmp(argv[1], "help") == 0) {
 		cli_help();
+		return 0;
+	}
+
+	if (strcmp(argv[1], "database") == 0) {
+		cli_database(argc, argv);
 		return 0;
 	}
 
