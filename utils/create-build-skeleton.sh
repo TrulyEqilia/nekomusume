@@ -10,6 +10,8 @@ mkdir build/objects/src/lib/common
 mkdir build/objects/src/lib/common/fs
 mkdir build/objects/src/lib/common/char
 
+mkdir objects/tests
+
 mkdir build/objects/src/cli
 
 mkdir bins/
