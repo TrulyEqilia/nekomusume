@@ -13,14 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Install musl
+      run: sudo apt-get install musl-tools -y
     - name: Run nproc
       run: nproc
     - name: Create skeleton build directory
       run: utils/create-build-skeleton.sh
     - name: Build
-      run: make
+      run: make CC=musl-gcc
     - name: Run checks
-      run: make tests
+      run: make tests CC=musl-gcc
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
