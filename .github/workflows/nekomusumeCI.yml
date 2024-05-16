@@ -24,7 +24,8 @@ jobs:
     - name: Run checks
       run: make tests CC=musl-gcc
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: nekomusume-artifact
         path: bins/nekomusume
+        compression-level: 0
