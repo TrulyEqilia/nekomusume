@@ -1,4 +1,4 @@
-name: Nekomusume CI
+name: Nekomusume (musl, dynamic)
 
 on:
   push:
