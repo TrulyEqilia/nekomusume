@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "../../headers/src/cli/databaseHelp.h"
+#include "../../../headers/src/cli/database/databaseHelp.h"
 
-#include "../../headers/src/cli/database.h"
+#include "../../../headers/src/cli/database/database.h"
 
 uint8_t cli_database(int argc, char *argv[])
 {

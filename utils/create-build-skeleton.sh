@@ -13,5 +13,6 @@ mkdir build/objects/src/lib/common/char
 mkdir build/objects/tests
 
 mkdir build/objects/src/cli
+mkdir build/objects/src/cli/database
 
 mkdir bins/

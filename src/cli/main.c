@@ -3,8 +3,8 @@
 #include <errno.h> // errno
 #include <stdlib.h>
 
+#include "../../headers/src/cli/database/database.h"
 #include "../../headers/src/cli/index.h"
-#include "../../headers/src/cli/database.h"
 
 #include "../../headers/src/cli/help.h"
 

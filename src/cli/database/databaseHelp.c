@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "../../headers/src/cli/databaseHelp.h"
+#include "../../../headers/src/cli/database/databaseHelp.h"
 
 uint8_t cli_databaseHelp(void)
 {

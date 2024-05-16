@@ -8,8 +8,8 @@ entry: cli lib
 	$(LD) $(LDFLAGS) -r -o build/objects/src/mix.o build/objects/src/cli/mix.o build/objects/src/lib/mix.o
 	$(CC) $(LDFLAGS) -o bins/nekomusume build/objects/src/mix.o
 
-cli: cliMain cliHelp cliDatabase cliDatabaseHelp
-	$(LD) $(LDFLAGS) -r -o build/objects/src/cli/mix.o build/objects/src/cli/main.o build/objects/src/cli/help.o build/objects/src/cli/database.o build/objects/src/cli/databaseHelp.o
+cli: cliMain cliHelp cliDatabase
+	$(LD) $(LDFLAGS) -r -o build/objects/src/cli/mix.o build/objects/src/cli/main.o build/objects/src/cli/help.o build/objects/src/cli/database.o
 
 cliMain:
 	$(CC) $(CFLAGS) -c -o build/objects/src/cli/main.o src/cli/main.c
@@ -17,11 +17,14 @@ cliMain:
 cliHelp:
 	$(CC) $(CFLAGS) -c -o build/objects/src/cli/help.o src/cli/help.c
 
-cliDatabase:
-	$(CC) $(CFLAGS) -c -o build/objects/src/cli/database.o src/cli/database.c
+cliDatabase: cliDatabaseMain cliDatabaseHelp
+	$(LD) $(LDFLAGS) -r -o build/objects/src/cli/database.o build/objects/src/cli/database/main.o build/objects/src/cli/database/databaseHelp.o
+
+cliDatabaseMain:
+	$(CC) $(CFLAGS) -c -o build/objects/src/cli/database/main.o src/cli/database/database.c
 
 cliDatabaseHelp:
-	$(CC) $(CFLAGS) -c -o build/objects/src/cli/databaseHelp.o src/cli/databaseHelp.c
+	$(CC) $(CFLAGS) -c -o build/objects/src/cli/database/databaseHelp.o src/cli/database/databaseHelp.c
 
 lib: libCommon
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/mix.o build/objects/src/lib/common/mix.o
