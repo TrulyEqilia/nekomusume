@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <unistd.h>
-#include <errno.h>
-#include <ctype.h>
+#include <stdint.h> // uint8_t
+#include <errno.h> // errno
+#include <stdio.h> // perror(3)
+#include <unistd.h> // getlogin_r(3)
+#include <ctype.h> // toupper(3), tolower(3)
 
 #include "../../../../headers/src/lib/common/char/getFormalUsername.h"
 
