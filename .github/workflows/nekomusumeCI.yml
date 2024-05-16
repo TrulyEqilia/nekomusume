@@ -1,26 +1,26 @@
 name: Nekomusume CI
 
 on:
-        push:
-                branches: [ "main" ]
-        pull_request:
-                branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-        build:
+  build:
 
-                runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-                steps:
-                - uses: actions/checkout@v4
-                - name: Create skeleton build directory
-                        run: utils/create-build-skeleton.sh
-                - name: Build
-                        run: make
-                - name: Run checks
-                        run: make tests
-                - name: Upload artifact
-                        uses: actions/upload-artifact@v2
-                        with:
-                                name: nekomusume-artifact
-                                path: bins/nekomusume
+    steps:
+    - uses: actions/checkout@v4
+    - name: Create skeleton build directory
+      run: utils/create-build-skeleton.sh
+    - name: Build
+      run: make
+    - name: Run checks
+      run: make tests
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: nekomusume-artifact
+        path: bins/nekomusume
