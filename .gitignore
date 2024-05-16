@@ -1,0 +1,9 @@
+# Object files
+*.o
+# Assembly files
+*.S
+# Shared object files
+*.so
+# ELF binaries in this repo (repo-specific)
+bins/nekomusume
+tests/0010-doesFileExist/elf
