@@ -1,7 +1,7 @@
 CC=clang
 LD=ld
 
-CFLAGS=-Wall -Wextra -Wpedantic -Og -ggdb3 -fPIC -fstack-clash-protection
+CFLAGS=-Wall -Wextra -Wpedantic -Weverything -Og -ggdb3 -fPIC -fstack-clash-protection
 LDFLAGS=
 
 entry: cli lib
