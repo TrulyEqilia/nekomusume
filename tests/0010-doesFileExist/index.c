@@ -26,7 +26,7 @@ int main(void)
         printf("%s", "test 3: ");
         if (doesFileExist("proc/self") != 0) {
                 printf("%s\n", "!!! FAILED !!!");
-                exitCode = exitCode + 3;
+                exitCode = exitCode + 4;
         } else {
                 printf("%s\n", "success!");
         }
