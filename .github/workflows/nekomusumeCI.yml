@@ -1,24 +1,24 @@
 name: Nekomusume CI
 
 on:
-	push:
-		branches: [ "main" ]
-	pull_request:
-		branches: [ "main" ]
+        push:
+                branches: [ "main" ]
+        pull_request:
+                branches: [ "main" ]
 
 jobs:
-	build:
+        build:
 
-		runs-on: ubuntu-latest
+                runs-on: ubuntu-latest
 
-		steps:
-			- uses: actions/checkout@v4
-			- name: Install dependencies
-				run: make
+                steps:
+                        - uses: actions/checkout@v4
+                        - name: Install dependencies
+                                run: make
 
-			- name: Upload artifact
-				uses: actions/upload-artifact@v2
-			with:
-				name: nekomusume binary
-				path: bins/nekomusume
+                        - name: Upload artifact
+                                uses: actions/upload-artifact@v2
+                        with:
+                                name: nekomusume binary
+                                path: bins/nekomusume
 
