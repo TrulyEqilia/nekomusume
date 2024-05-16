@@ -8,9 +8,10 @@ on:
 
 jobs:
         build:
-        runs-on: ubuntu-latest
 
-        steps:
+                runs-on: ubuntu-latest
+
+                steps:
                 - uses: actions/checkout@v4
                 - name: Create skeleton build directory
                 run: utils/create-build-skeleton.sh
