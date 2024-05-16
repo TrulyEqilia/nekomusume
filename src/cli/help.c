@@ -1,8 +1,8 @@
-#include <stdio.h> // printf
-#include <string.h> // strcmp(3)
-#include <errno.h> // errno
 #include <stdint.h> // uint8_t
-#include <stdlib.h>
+#include <stdlib.h> // malloc(3), abort(3), free(3)
+#include <errno.h> // errno
+#include <stdio.h> // perror(3), printf(3)
+#include <string.h> // strerror(3), strcmp(3)
 
 #include "../../headers/src/lib/common/char/getFormalUsername.h"
 

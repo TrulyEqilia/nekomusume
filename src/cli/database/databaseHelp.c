@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdint.h>
+#include <stdint.h> // uint8_t
+#include <stdio.h> // printf(3)
 
 #include "../../../headers/src/cli/database/databaseHelp.h"
 

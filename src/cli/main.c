@@ -1,7 +1,6 @@
-#include <stdio.h> // printf
+#include <stdlib.h> // abort(3)
+#include <stdio.h> // printf(3)
 #include <string.h> // strcmp(3)
-#include <errno.h> // errno
-#include <stdlib.h>
 
 #include "../../headers/src/cli/database/database.h"
 #include "../../headers/src/cli/index.h"
