@@ -11,3 +11,5 @@ mkdir build/objects/src/lib/common/fs
 mkdir build/objects/src/lib/common/char
 
 mkdir build/objects/src/cli
+
+mkdir bins/
