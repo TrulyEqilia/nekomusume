@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Create skeleton build directory
+      run: utils/create-build-skeleton.sh
     - name: make
       run: make
