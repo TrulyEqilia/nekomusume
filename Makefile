@@ -31,7 +31,7 @@ lib: libCommon
 
 libCommon: libCommonFs libCommonChar
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/mix.o build/objects/src/lib/common/fs/mix.o build/objects/src/lib/common/char/mix.o
-	$(CC) $(CFLAGS) -shared -o build/objects/src/lib/common/mix.so build/objects/src/lib/common/mix.o
+#	$(CC) $(CFLAGS) -shared -o build/objects/src/lib/common/mix.so build/objects/src/lib/common/mix.o
 
 libCommonChar: libCommonCharGetFormalUsername
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/char/mix.o build/objects/src/lib/common/char/getFormalUsername.o
