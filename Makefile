@@ -1,7 +1,7 @@
 CC=clang
 LD=ld
 
-CFLAGS=-Wall -Wextra -Wpedantic -Og -ggdb3 -fPIC -fstack-clash-protection
+CFLAGS=-O0 -ggdb3 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wformat-security -fstack-protector-all --param ssp-buffer-size=4 -fPIE
 LDFLAGS=
 
 entry: cli lib
