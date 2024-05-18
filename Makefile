@@ -29,15 +29,9 @@ cliDatabaseHelp:
 lib: libCommon
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/mix.o build/objects/src/lib/common/mix.o
 
-libCommon: libCommonFs libCommonChar
-	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/mix.o build/objects/src/lib/common/fs/mix.o build/objects/src/lib/common/char/mix.o
+libCommon: libCommonFs
+	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/mix.o build/objects/src/lib/common/fs/mix.o
 #	$(CC) $(CFLAGS) -shared -o build/objects/src/lib/common/mix.so build/objects/src/lib/common/mix.o
-
-libCommonChar: libCommonCharGetFormalUsername
-	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/char/mix.o build/objects/src/lib/common/char/getFormalUsername.o
-
-libCommonCharGetFormalUsername:
-	$(CC) $(CFLAGS) -c -o build/objects/src/lib/common/char/getFormalUsername.o src/lib/common/char/getFormalUsername.c
 
 libCommonFs: libCommonFsDoesFileExist libCommonFsLockFile libCommonFsUnlockFile
 	$(LD) $(LDFLAGS) -r -o build/objects/src/lib/common/fs/mix.o build/objects/src/lib/common/fs/doesFileExist.o build/objects/src/lib/common/fs/lockFile.o build/objects/src/lib/common/fs/unlockFile.o
