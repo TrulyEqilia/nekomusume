@@ -17,6 +17,6 @@ uint8_t cli_help(void)
 	printf("\t%s\n", "nekomusume database\tManage the internal database");
 	printf("\n");
 
-	printf("%s%s%s\n", "Thank you for trying out nekomusume ^w^");
+	printf("%s\n", "Thank you for trying out nekomusume ^w^");
 	return 0;
 }
