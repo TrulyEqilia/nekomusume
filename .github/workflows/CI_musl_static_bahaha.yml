@@ -20,7 +20,7 @@ jobs:
     - name: Create skeleton build directory
       run: utils/create-build-skeleton.sh
     - name: Build
-      run: musl-gcc -o bins/motherfucker src/cli/main.c src/cli/help.c src/cli/database/database.c src/cli/database/databaseHelp.c src/lib/common/fs/doesFileExist.c src/lib/common/fs/lockFile.c src/lib/common/fs/unlockFile.c -Ofast -funroll-loops -march=native
+      run: musl-gcc -o bins/nekomusume src/cli/main.c src/cli/help.c src/cli/database/database.c src/cli/database/databaseHelp.c src/lib/common/fs/doesFileExist.c src/lib/common/fs/lockFile.c src/lib/common/fs/unlockFile.c -Ofast -funroll-loops -march=native -static
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
