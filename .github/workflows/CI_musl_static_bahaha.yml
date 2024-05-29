@@ -1,0 +1,29 @@
+name: Nekomusume (musl, static, bahaha)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install musl
+      run: sudo apt-get install musl-tools -y
+    - name: Run nproc
+      run: nproc
+    - name: Create skeleton build directory
+      run: utils/create-build-skeleton.sh
+    - name: Build
+      run: musl-gcc -o bins/motherfucker src/cli/main.c src/cli/help.c src/cli/database/database.c src/cli/database/databaseHelp.c src/lib/common/fs/doesFileExist.c src/lib/common/fs/lockFile.c src/lib/common/fs/unlockFile.c -Ofast -funroll-loops -march=native
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: nekomusume-artifact
+        path: bins/nekomusume
+        compression-level: 0
