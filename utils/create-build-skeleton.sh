@@ -6,8 +6,6 @@ mkdir build/objects/src
 mkdir build/objects/shared
 
 mkdir build/objects/src/lib
-mkdir build/objects/src/lib/common
-mkdir build/objects/src/lib/common/fs
 
 mkdir build/objects/tests
 
